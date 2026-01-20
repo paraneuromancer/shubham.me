@@ -1,0 +1,37 @@
+{
+    "reading": [
+        {
+            "title": "The Humans",
+            "author": "Matt Haig",
+            "image": "/images/The_Humans.jpg"
+        }
+    ],
+    "watching": [
+        {
+            "title": "Modern Family",
+            "platform": "Netflix",
+            "image": "/images/tv/severance.jpg"
+        }
+    ],
+    "listening": [
+        {
+            "title": "Lex friedman podcast with DHH",
+            "artist": "Lex Friedman Podcast",
+            "image": "/images/music/ram.jpg"
+        }
+    ],
+    "stack": [
+        {
+            "name": "Next.js",
+            "icon": "nextdotjs"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "tailwindcss"
+        },
+        {
+            "name": "Framer Motion",
+            "icon": "framer"
+        }
+    ]
+}

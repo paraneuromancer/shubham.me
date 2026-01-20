@@ -1,0 +1,35 @@
+{
+    "books": [
+        {
+            "title": "Eat That Frog",
+            "author": "Brian Tracy",
+            "desc": "Eat that frog is a book that teaches you to prioritize your tasks and focus on the most important ones first.",
+            "link": "#",
+            "image": "/images/eat-that-frog.jpeg"
+        },
+        {
+            "title": "The Humans",
+            "author": "Matt Haig",
+            "desc": "Story of a man who fell to Earth.",
+            "link": "#",
+            "image": "/images/The_Humans.jpg"
+        }
+    ],
+    "games": [
+        {
+            "title": "Mass Effect 3",
+            "developer": "BioWare",
+            "desc": "Mass Effect 3 is a masterpiece of world design, story and gameplay.",
+            "link": "#",
+            "image": "/images/mass-effect.avif"
+        }
+    ],
+    "equipment": [
+        {
+            "title": "Asus TUF Gaming A15",
+            "desc": "My Laptop for Gaming.",
+            "link": "#",
+            "image": "https://m.media-amazon.com/images/I/71sWk4oFjBL._SL1500_.jpg"
+        }
+    ]
+}

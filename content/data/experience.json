@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Software Engineer",
+        "company": "Appzlogic Mobility Solutions",
+        "location": "Pune, India",
+        "period": "June 2025 – Present",
+        "description": [
+            "Led a team of three in the design and development of Nova-aid, a RAG-based, AI-powered customer support chatbot, utilizing Node.js (Fastify), React, MongoDB, and vector databases.",
+            "Enhanced model efficiency by 40% through the implementation of AI-driven dynamic chunking, outperforming traditional text-processing methods.",
+            "Developed a real-time chat system leveraging Socket.io and RabbitMQ, supporting concurrent user sessions and advanced AI features."
+        ],
+        "skills": [
+            "Node.js",
+            "React",
+            "MongoDB",
+            "RAG",
+            "Socket.io",
+            "RabbitMQ"
+        ]
+    },
+    {
+        "title": "Associate Software Engineer",
+        "company": "thinkbridge",
+        "location": "Pune, India",
+        "period": "March 2024 – March 2025",
+        "description": [
+            "Successfully contributed to EROMs, a US Utilities Management project, resolving 50+ user-stories addressing major system inefficiencies and performance bottlenecks.",
+            "Gained hands-on experience in developing a multi-client codebase using Agile methodologies, Angular, .NET, Entity Framework, and SQL Server.",
+            "Spearheaded the deployment of DPP notifications for all clients, impacting 36,000+ accounts."
+        ],
+        "skills": [
+            "Angular",
+            ".NET",
+            "SQL Server",
+            "Entity Framework",
+            "Azure DevOps"
+        ]
+    },
+    {
+        "title": "PG Diploma in Advanced Computing",
+        "company": "CDAC",
+        "location": "Pune, India",
+        "period": "Sep 2023 – Feb 2024",
+        "description": [
+            "Grade: A",
+            "Scored 250+ in CDAC Common Entrance Examination."
+        ],
+        "skills": [
+            "Advanced Computing",
+            "Full Stack Development"
+        ]
+    },
+    {
+        "title": "Bachelor of Computer Engineering",
+        "company": "Saraswati College Of Engineering",
+        "location": "Navi Mumbai, India",
+        "period": "Jun 2019 – May 2023",
+        "description": [
+            "CGPA: 8.43/10",
+            "Major Project: Driver Drowsiness Detection System using Python and Raspberry Pi."
+        ],
+        "skills": [
+            "Python",
+            "Machine Learning",
+            "IoT"
+        ]
+    }
+]

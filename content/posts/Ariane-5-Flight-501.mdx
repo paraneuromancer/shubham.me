@@ -1,0 +1,53 @@
+---
+title: "What went wrong with Ariane 5 Flight 501"
+publishedAt: "2024-05-21"
+summary: "A study of catastrophic engineering failures—and the structural patterns behind them."
+image: "./images/ariane-disaster.png"
+---
+
+## Ariane 5 Flight 501: Integer Overflow and the Fallacy of Software Reuse
+
+The explosion of the Ariane 5 rocket on June 4, 1996, is perhaps the most famous software failure in history. While often cited as a simple "bug," it is more accurately described as a failure of requirements engineering and the improper reuse of legacy components.
+
+
+---
+
+### 1. The Legacy of Ariane 4
+
+The European Space Agency (ESA) had spent a decade developing the Ariane 5 to replace the successful Ariane 4. To save costs and development time, engineers reused the Inertial Reference System (IRS) software from the Ariane 4. The IRS is responsible for measuring the rocket's attitude and position.
+
+The software was written in Ada. One specific function was responsible for aligning the inertial platform. This function involved converting a 64-bit floating-point number, representing the "Horizontal Bias" (BH) or horizontal velocity, into a 16-bit signed integer for processing by the downstream architecture.
+
+---
+
+### 2.  The Physics of the Overflow
+
+In the Ariane 4, the flight profile was such that the horizontal velocity could never physically exceed the value representable by a 16-bit integer (32,767). Therefore, the engineers did not wrap this specific conversion in an exception handler (try/catch block), reasoning that an overflow was physically impossible. This decision was documented and theoretically sound for the Ariane 4.
+
+The Ariane 5, however, was a much more powerful rocket with a significantly different trajectory. It gained horizontal velocity much faster. Approximately 37 seconds after launch, the horizontal velocity of the Ariane 5 exceeded the 16-bit limit (32,767).
+
+---
+
+### 3. The Exception Handling Failure
+
+> *A valid assumption in one physical system becomes a fatal flaw in another.*
+
+When the overflow occurred, the hardware threw an operand error. The Ada code, lacking a handler for this specific error, followed its default failure mode: it shut down the IRS computer to prevent it from outputting corrupt data.
+
+Crucially, the rocket had two IRS units: an active one and a hot backup. Both units ran the identical software. Both units encountered the identical physics at the identical moment. Consequently, the backup IRS failed within milliseconds of the active IRS.
+
+---
+
+### 4. The Interpretation of Diagnostic Data
+
+When the IRS units failed, they transmitted a diagnostic bit pattern to the On-Board Computer (OBC) to indicate the shutdown. The OBC, however, was not programmed to interpret this diagnostic pattern as an error message. Instead, it interpreted the bit pattern as valid flight data. The pattern looked like a command indicating the rocket was 90 degrees off course.
+
+The OBC responded by commanding the engine nozzles to swivel to their maximum limit to correct this phantom deviation. This sudden, violent maneuver caused the rocket to veer into high aerodynamic stress, tearing the boosters from the main stage. The automated flight termination system then triggered the self-destruct mechanism.
+
+---
+
+### 5. The $370 Million Lesson
+
+> **The inquiry board’s conclusion was precise and unforgiving**
+
+The total loss was estimated at $370 million, including the Cluster satellite payload. The inquiry board identified the root cause not as the overflow itself, but as the lack of a "Design by Contract" approach when reusing the module. The precondition (Velocity < 32,767) was implicit in the Ariane 4 design but was not explicitly enforced or checked in the Ariane 5 integration. This highlights a critical lesson: **Code reuse is not free. Reused code must be re-verified against the environmental constraints of the new system**
