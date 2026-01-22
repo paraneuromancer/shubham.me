@@ -9,12 +9,12 @@ image: "./images/ariane-disaster.png"
 
 The explosion of the Ariane 5 rocket on June 4, 1996, is perhaps the most famous software failure in history. While often cited as a simple "bug," it is more accurately described as a failure of requirements engineering and the improper reuse of legacy components.
 
-
+![Abstract system architecture illustrating failure and scale](/images/ariane-disaster.png)
 ---
 
 ### 1. The Legacy of Ariane 4
 
-The European Space Agency (ESA) had spent a decade developing the Ariane 5 to replace the successful Ariane 4. To save costs and development time, engineers reused the Inertial Reference System (IRS) software from the Ariane 4. The IRS is responsible for measuring the rocket's attitude and position.
+The European Space Agency (ESA) had spent a decade developing the Ariane 5 to replace the successful Ariane 4. To save costs and development time, engineers reused the Inertial Reference System (IRS) software from the Ariane 4. The IRS is responsible for measuring the rocket's altitude and position.
 
 The software was written in Ada. One specific function was responsible for aligning the inertial platform. This function involved converting a 64-bit floating-point number, representing the "Horizontal Bias" (BH) or horizontal velocity, into a 16-bit signed integer for processing by the downstream architecture.
 
@@ -43,7 +43,7 @@ Crucially, the rocket had two IRS units: an active one and a hot backup. Both un
 When the IRS units failed, they transmitted a diagnostic bit pattern to the On-Board Computer (OBC) to indicate the shutdown. The OBC, however, was not programmed to interpret this diagnostic pattern as an error message. Instead, it interpreted the bit pattern as valid flight data. The pattern looked like a command indicating the rocket was 90 degrees off course.
 
 The OBC responded by commanding the engine nozzles to swivel to their maximum limit to correct this phantom deviation. This sudden, violent maneuver caused the rocket to veer into high aerodynamic stress, tearing the boosters from the main stage. The automated flight termination system then triggered the self-destruct mechanism.
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PK_yguLapgA?si=GNNzBjK1rtJryi7F&amp;start=92" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
 ### 5. The $370 Million Lesson
