@@ -15,8 +15,8 @@ export function Hero() {
 export const products = [
     {
         title: "Moonbeam",
-        link: "https://gomoonbeam.com",
-        thumbnail: "https://picsum.photos/id/10/800/800",
+        link: "https://shubham-me-jade.vercel.app/blog",
+        thumbnail: "/images/probability.png",
     },
     {
         title: "Mass Effect",
@@ -29,19 +29,19 @@ export const products = [
         thumbnail: "/images/geralt-of-revia.jpg",
     },
     {
-        title: "CSE",
-        link: "https://www.youtube.com/channel/UCTzjnbxgPIHYD0_qDBvNOSQ",
-        thumbnail: "/images/work-desk.jpeg",
+        title: "that's me",
+        link: "https://shubham-me-jade.vercel.app/blog",
+        thumbnail: "/images/mypic.jpeg",
     },
     {
-        title: "Silicon Vallet",
+        title: "Silicon Valley",
         link: "https://www.siliconvalley.com/",
         thumbnail: "/images/silicon-valley.jpg",
     },
     {
         title: "Ye le",
         link: "https://app.pixelperfect.quest",
-        thumbnail: "/images/ye le.jpeg",
+        thumbnail: "/images/cat.jpeg",
     },
     {
         title: "IIT Bombay",
@@ -64,27 +64,27 @@ export const products = [
         thumbnail: "/images/Normany.jpeg",
     },
     {
-        title: "Python",
+        title: "",
         link: "https://www.python.org/",
         thumbnail: "/images/python.jpg",
     },
     {
         title: "RAG",
         link: "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
-        thumbnail: "/images/rag.png",
+        thumbnail: "/images/the-rule-book.jpeg",
     },
     {
         title: "Google AI Labs",
         link: "https://labs.google/",
-        thumbnail: "/images/google-event.jpeg",
+        thumbnail: "/images/ariane-disaster.png",
     },
     {
-        title: "Appzlogic",
-        link: "https://invoker.lol",
-        thumbnail: "/images/second-office-appzlogic.jpeg",
+        title: "Triumph Thruxton",
+        link: "https://www.triumphmotorcycles.in/motorcycles/classic/thruxton/thruxton-400",
+        thumbnail: "/images/thruxton.jpeg",
     },
     {
-        title: "Sunflower Field",
+        title: "Say my name",
         link: "https://efreeinvoice.com",
         thumbnail: "/images/breaking-bad.jpg",
     },
