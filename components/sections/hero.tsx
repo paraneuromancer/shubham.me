@@ -14,14 +14,14 @@ export function Hero() {
 
 export const products = [
     {
-        title: "Moonbeam",
-        link: "https://shubham-me-jade.vercel.app/blog",
-        thumbnail: "/images/probability.png",
+        title: "Silicon Valley",
+        link: "https://www.siliconvalley.com/",
+        thumbnail: "/images/silicon-valley.jpg",
     },
     {
-        title: "Mass Effect",
-        link: "https://www.ea.com/games/mass-effect",
-        thumbnail: "/images/mass-effect.jpg",
+        title: "Pune",
+        link: "#",
+        thumbnail: "/images/pune.jpeg",
     },
     {
         title: "Witcher III Wild Hunt",
@@ -34,9 +34,9 @@ export const products = [
         thumbnail: "/images/mypic.jpeg",
     },
     {
-        title: "Silicon Valley",
-        link: "https://www.siliconvalley.com/",
-        thumbnail: "/images/silicon-valley.jpg",
+        title: "Mass Effect",
+        link: "https://www.ea.com/games/mass-effect",
+        thumbnail: "/images/mass-effect.jpg",
     },
     {
         title: "Ye le",

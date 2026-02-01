@@ -36,6 +36,15 @@ export default function NowPage() {
                         header={<Skeleton bg={item.image ? `url(${item.image})` : "bg-neutral-100 dark:bg-neutral-800"} />}
                     />
                 ))}
+                {data.listening && data.listening.map((item: any, i: number) => (
+                    <BentoGridItem
+                        key={i}
+                        title={item.title}
+                        description={item.author}
+                        header={<Skeleton bg={item.image ? `url(${item.image})` : undefined} />}
+                        className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                    />
+                ))}
             </BentoGrid>
         </div>
     );

@@ -15,12 +15,16 @@
     ],
     "listening": [
         {
-            "title": "Lex friedman podcast with DHH",
-            "artist": "Lex Friedman Podcast",
-            "image": "/images/music/ram.jpg"
+            "title": "Holiday",
+            "artist": "Green Day",
+            "image": "/images/Green-Day.png"
         }
     ],
     "stack": [
+        {
+            "name": "Python",
+            "icon": "python"
+        },
         {
             "name": "Next.js",
             "icon": "nextdotjs"
