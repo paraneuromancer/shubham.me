@@ -29,7 +29,7 @@ On August 1, 2012, Knight Capital Americas LLC, the largest trader of U.S. equit
 
 #### The Operational Context: Dark Pools and the RLP
 
-The catalyst for the disaster was the New York Stock Exchange's launch of the Retail Liquidity Program (RLP). This program was designed to provide retail investors with improved pricing by executing trades within a "dark pool"—a private market offering liquidity away from the public eye. As a market maker, Knight Capital was required to update its automated routing software, SMARS (Smart Market Access Routing System), to interact with this new exchange mechanism.
+The catalyst for the disaster was the New York Stock Exchange's launch of the Retail Liquidity Program (RLP). This program was designed to provide retail investors with improved pricing by executing trades within a "dark pool" a private market offering liquidity away from the public eye. As a market maker, Knight Capital was required to update its automated routing software, SMARS (Smart Market Access Routing System), to interact with this new exchange mechanism.
 
 The engineering team at Knight faced a tight deadline. In preparation for the August 1st launch, they developed new logic to handle the RLP interaction. However, rather than creating a new configuration flag to enable this feature, the developers chose to repurpose an existing, unused flag within the SMARS code.
 
@@ -39,7 +39,7 @@ The engineering team at Knight faced a tight deadline. In preparation for the Au
 
 The flag in question had previously controlled a functionality known as "Power Peg." This was an aggressive testing utility designed years prior to verify that the trading algorithms could effectively move the market. The Power Peg logic was simple and dangerous: it would buy at the asking price and sell at the bid price, effectively paying the spread on every trade to force price movement.
 
-This code had been "dead" for years—unused but crucially not removed from the codebase. The developers repurposed the flag so that in the new software version, setting the flag to "true" would activate the RLP logic. In the old software version, setting the flag to "true" activated the Power Peg logic.
+This code had been "dead" for years unused but crucially not removed from the codebase. The developers repurposed the flag so that in the new software version, setting the flag to "true" would activate the RLP logic. In the old software version, setting the flag to "true" activated the Power Peg logic.
 
 ---
 
