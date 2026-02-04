@@ -17,7 +17,7 @@ export function Experience({ data }: { data: any[] }) {
         <section className="py-20 bg-neutral-950 relative" id="experience">
             <div className="max-w-7xl mx-auto px-4 mb-20 text-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                    The Timeline of Evolution
+                    Experience
                 </h2>
                 <p className="text-neutral-400 max-w-2xl mx-auto">
                     A visual journey through my professional growth and technical milestones.
